@@ -1,0 +1,128 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <nav #navBarElement data-toggled="false" data-transitionable="false">
+        <div id="nav-logo-section" class="nav-section">
+            <a routerLink="/main">
+                <h1 data-value="yashaswi.dev" class="titleLogoH1" #h1Element (mouseover)="onMouseOver($event)">
+                    yashaswi.dev
+                </h1>
+            </a>
+        </div>
+        <div id="nav-mobile-section">
+            <div id="nav-link-section" class="nav-section">
+                <a routerLink="/about">ABOUT</a>
+                <a href="https://drive.google.com/file/d/1wCSV_n_zM6cWn7FLzhpTS1z70M5SGxTk/view?usp=sharing"
+                    target="_blank">RESUME</a>
+            </div>
+            <div id="nav-social-section" class="nav-section">
+                <a href="https://www.linkedin.com/in/yashaswi-poddar/" target="_blank"><fa-icon
+                        class="linkedinIcon fa-2x" [icon]="falinkedin"></fa-icon></a>
+                <a href="https://github.com/whateverhappenshappens" target="_blank"><fa-icon class="githubIcon fa-2x"
+                        [icon]="fagithub"></fa-icon></a>
+                <a href="https://leetcode.com/endure/" target="_blank"><fa-icon class="leetcodeIcon fa-2x"
+                        [icon]="faleetcode"></fa-icon></a>
+
+            </div>
+            <div id="nav-contact-section" class="nav-section">
+                <a routerLink="/contact">GET IN TOUCH</a>
+            </div>
+        </div>
+        <button id="nav-toggle-button" type="button" (click)="toggleNav()">
+            <span>Menu</span>
+            <fa-icon class="menuIcon fa" [icon]="fabars"></fa-icon>
+        </button>
+    </nav>
+    <main>
+        <section class="section--home wf-section">
+            <div class="container--xlarge">
+                <div class="header-home__grid">
+                    <div class="grid-item__video grid-section">
+                        <video class="video-container" autoplay loop muted>
+                            <source
+                                src="https://cdn.dribbble.com/userupload/7511674/file/original-968366f7df2dced3a044b76d7d63b899.mp4" />
+                        </video>
+                        <!-- <img alt="Workspace" id="15633275"
+                            data-animated-url="https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif"
+                            skip_resize="true"
+                            srcset="https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 320w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 400w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 450w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 640w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 700w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 800w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 840w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 1000w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 1200w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 768w, https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif 1600w"
+                            sizes="(max-width: 919px) 100vw, max(768px, 98vh)"
+                            src="https://cdn.dribbble.com/users/4382412/screenshots/15633275/media/085a014ebebde73e5cd510c93941f49a.gif"
+                            > -->
+                    </div>
+                    <div class="grid-item__description grid-section">
+                        <a routerLink="/contact" class="header-home-content-wrapper w-inline-block"
+                            id="data-header-home">
+                            <div class="margin--bottom margin--xsmall">
+                                <div class="icon-hand__wrapper">
+                                    <div class="icon-hand w-embed" id="data_icon-hand">
+                                        <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.28 39.22">
+                                            <path fill="currentColor" class="b"
+                                                d="M16.16,39.22c-6.22,0-9.89-4.69-11.25-9.08L.12,14.69c-.21-.69-.15-1.43,.19-2.06,.32-.61,.86-1.06,1.51-1.26,.65-.21,1.35-.15,1.97,.17,.63,.33,1.1,.88,1.31,1.57l2.16,6.99c.05,.16,.18,.28,.34,.3,.07,.01,.27,.02,.41-.18,.07-.1,.1-.22,.08-.36L5.63,6.34c-.26-1.44,.68-2.82,2.09-3.08,.68-.13,1.38,.02,1.95,.42,.58,.4,.97,1,1.09,1.7l2.01,10.99c.02,.11,.09,.2,.18,.25,.05,.03,.15,.07,.28,.03,.15-.05,.26-.2,.26-.35V2.64c0-1.46,1.17-2.64,2.61-2.64s2.61,1.18,2.61,2.64V15.81c0,.34,.22,.64,.54,.73,.23,.07,.46,.03,.64-.1,.18-.12,.3-.33,.32-.55h0l1.01-9.83c.08-.72,.43-1.36,.99-1.81,.54-.43,1.21-.62,1.88-.55,.68,.07,1.31,.4,1.75,.95,.45,.55,.65,1.25,.58,1.95l-1.62,15.77c-.11,1.07,.52,1.76,1.15,2.06,.61,.29,1.53,.33,2.26-.41l2.94-2.98c.56-.57,1.32-.89,2.12-.89h0c.8,0,1.56,.32,2.12,.89,1.18,1.19,1.17,3.13-.02,4.31-1.35,1.36-2.56,2.59-3.66,3.71-7.87,8.01-9.98,10.16-15.57,10.16ZM2.6,12.04c-.18,0-.37,.03-.54,.09-.45,.14-.82,.45-1.05,.87-.24,.45-.28,.96-.13,1.46l4.78,15.45c.62,2,3.21,8.52,10.5,8.52,5.25,0,7.32-2.1,15-9.92,1.1-1.12,2.31-2.35,3.66-3.71,.88-.88,.89-2.31,.02-3.19-.42-.42-.97-.65-1.56-.65h0c-.59,0-1.14,.23-1.56,.65l-2.94,2.98c-.84,.85-2.08,1.08-3.17,.57-1.1-.52-1.72-1.64-1.6-2.86l1.62-15.77c.05-.5-.09-.98-.4-1.37-.31-.38-.74-.61-1.22-.66-.48-.05-.93,.08-1.3,.38-.39,.31-.64,.77-.69,1.27l-1.01,9.83c-.04,.46-.29,.87-.67,1.13-.38,.26-.86,.33-1.31,.2-.65-.18-1.11-.8-1.11-1.49V2.64c0-1.02-.81-1.85-1.82-1.85s-1.82,.83-1.82,1.85v13.67c0,.49-.33,.94-.79,1.09-.31,.11-.65,.08-.93-.09-.29-.17-.5-.46-.56-.79l-2.01-11c-.09-.49-.36-.91-.76-1.19-.4-.28-.88-.38-1.36-.29-.98,.18-1.64,1.15-1.45,2.16l2.47,13.53c.05,.36-.03,.68-.22,.95-.27,.38-.72,.57-1.18,.5-.46-.07-.83-.4-.97-.85l-2.16-6.99c-.15-.48-.48-.87-.92-1.1-.26-.13-.54-.2-.82-.2Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="max-width--small"></div>
+                            </div>
+                            <p id="data-p" class="p-info">Hi, I am Yashaswi Poddar. As a software developer, I
+                                specialize in
+                                translating 0's and 1's into meaningful and functional solutions.</p>
+                        </a>
+                    </div>
+                    <div class="grid-item__title grid-section">
+
+                        <!-- <div class="circle"><a class="hover-circle" routerLink="/about">16</a>16</div> -->
+                        <a routerLink="/about" class="heading-title__wrapper">
+                            <div class="header__heading-wrapper">
+                                <div class="heading-h1">
+                                    <h1 class="hover-text-part-1">SOFTWARE DEVELOPER</h1>
+                                </div>
+                                <div>
+                                    
+                                </div>
+                            </div>
+                            <div class="heading-icon-plus w-embed">
+                                <div class="icon-plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto"
+                                        viewBox="0 0 97 97">
+                                        <path fill="currentColor"
+                                            d="M3.09944e-06 49.1736L37.7671 49.1736C40.4167 49.2185 42.8866 50.3412 44.6829 52.2722L44.7278 52.3171C46.6588 54.1134 47.7815 56.6282 47.8264 59.2329L47.8264 97H49.1736L49.1736 59.2329C49.2185 56.5833 50.3412 54.1134 52.2722 52.3171L52.3171 52.2722C54.1134 50.3412 56.6283 49.2185 59.2329 49.1736L97 49.1736V47.8264L59.2329 47.8264C56.5833 47.7815 54.1134 46.6588 52.3171 44.7278L52.2722 44.6829C50.3412 42.8866 49.2185 40.3718 49.1736 37.7671L49.1736 3.09944e-06H47.8264L47.8264 37.7671C47.7815 40.4167 46.6588 42.8866 44.7278 44.6829L44.6829 44.7278C42.8866 46.6588 40.3718 47.7815 37.7671 47.8264L3.09944e-06 47.8264V49.1736ZM48.5 44.4583C50.7454 44.4583 52.5417 46.2546 52.5417 48.5C52.5417 50.7454 50.7454 52.5417 48.5 52.5417C46.2546 52.5417 44.4583 50.7454 44.4583 48.5C44.4583 46.2546 46.2546 44.4583 48.5 44.4583Z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid-item__work grid-section">
+
+                        <a class="project-section_wrapper" routerLink="/work">
+                            <div class="heading-about-title">
+                                <h3 class="heading">Projects</h3>
+                            </div>
+
+                            <!-- <div class="heading-icon-arrow"> -->
+                            <div class="icon-arrow  w-embed">
+
+                                <svg class="svg-arrow" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto"
+                                    viewBox="0 0 62 33">
+                                    <path fill="currentColor"
+                                        d="M61.0882 15.6372C48.9618 15.6372 40.1176 0.803745 40.0265 0.62174C39.7529 0.166727 39.2059 0.0757228 38.75 0.257728C38.2941 0.530736 38.2029 1.07675 38.3853 1.53177C38.6588 2.07778 44.4029 11.5421 53.2471 15.6372L0.911764 15.6372C0.364705 15.6372 -7.39744e-07 16.0012 -7.15877e-07 16.5472C-6.9201e-07 17.0932 0.364705 17.4572 0.911764 17.4572L53.2471 17.4572C44.4029 21.5523 38.6588 31.0166 38.3853 31.5626C38.2029 32.0176 38.2941 32.5637 38.75 32.8367C39.2059 33.0187 39.7529 32.9277 40.0265 32.4727C40.1176 32.2907 48.9618 17.4572 61.0882 17.4572C61.6353 17.4572 62 17.0932 62 16.5472C62 16.0012 61.6353 15.6372 61.0882 15.6372Z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>

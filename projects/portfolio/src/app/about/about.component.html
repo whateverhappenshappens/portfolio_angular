@@ -1,0 +1,271 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <nav #navBarElement data-toggled="false" data-transitionable="false">
+            <div id="nav-logo-section" class="nav-section">
+                <a routerLink="/main">
+                    <h1 data-value="yashaswi.dev" class="titleLogoH1" #h1Element (mouseover)="onMouseOver($event)">
+                        yashaswi.dev
+                    </h1>
+                </a>
+            </div>
+            <div id="nav-mobile-section">
+                <div id="nav-link-section" class="nav-section">
+                    <a id="about-active" href="#">ABOUT</a>
+                    <a href="https://drive.google.com/file/d/1wCSV_n_zM6cWn7FLzhpTS1z70M5SGxTk/view?usp=sharing"
+                        target="_blank">RESUME</a>
+                </div>
+                <div id="nav-social-section" class="nav-section">
+                    <a href="https://www.linkedin.com/in/yashaswi-poddar/" target="_blank"><fa-icon
+                            class="linkedinIcon fa-2x" [icon]="falinkedin"></fa-icon></a>
+                    <a href="https://github.com/whateverhappenshappens" target="_blank"><fa-icon
+                            class="githubIcon fa-2x" [icon]="fagithub"></fa-icon></a>
+                    <a href="https://leetcode.com/endure/" target="_blank"><fa-icon class="leetcodeIcon fa-2x"
+                            [icon]="faleetcode"></fa-icon></a>
+
+                </div>
+                <div id="nav-contact-section" class="nav-section">
+                    <a href="/contact">GET IN TOUCH</a>
+                </div>
+            </div>
+            <button id="nav-toggle-button" type="button" (click)="toggleNav()">
+                <span>Menu</span>
+                <fa-icon class="menuIcon fa" [icon]="fabars"></fa-icon>
+            </button>
+        </nav>
+        <main class="main-content">
+            <section class="section--about">
+                <div class="page-padding">
+                    <div class="container--large w-container">
+                        <div class="padding--vertical padding--custom1">
+                            <div class="margin--bottom margin--custom1">
+                                <div class="title__wrapper">
+                                    <div class="margin--bottom margin--large">
+                                        <div class="label__wrapper">
+                                            <a href="#">
+                                                <div id="about-btn" href="#">about</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="heading-huge__wrapper">
+                                        <div class="heading-huge__row">
+                                            <h1 class="heading--huge" id="heading--huge__translate1">
+                                                I build
+                                                <br>
+                                            </h1>
+                                        </div>
+                                        <div class="heading-huge__row">
+                                            <h1 class="heading--huge" id="heading--huge__translate2">
+                                                Things
+                                                <br>
+                                            </h1>
+                                        </div>
+                                        <div class="heading-huge__row">
+                                            <h1 class="heading--huge" id="heading--huge__translate3">
+                                                For The
+                                                <br>
+                                            </h1>
+                                        </div>
+                                        <div class="heading-huge__row">
+                                            <h1 class="heading--huge" id="heading--huge__translate4">
+                                                Web.
+                                                <br>
+                                            </h1>
+                                        </div>
+                                        <!-- <div class="heading-huge__row">
+                                            <h1 class="heading--huge">
+                                                Focus
+                                                <br>
+                                            </h1>
+                                        </div> -->
+
+                                    </div>
+                                </div>
+                                <div class="heading-huge__wrapper is--mobile">
+                                    <h1 class="heading--huge is--mobile">
+                                        I Build
+                                        <br>
+                                        THings
+                                        <br>
+                                        For the
+                                        <br>
+                                        Web.
+                                    </h1>
+                                </div>
+                                <div class="texture--noise is--about"></div>
+                            </div>
+                            <div class="about_content__grid">
+                                <div class="about-content__wrapper">
+                                    <div class="max-width--small">
+                                        <div class="margin--bottom margin--medium">
+                                            <p class="text-size--xlarge">
+                                                Backend developer with an interest for Frontend.
+                                            </p>
+                                        </div>
+                                        <p>
+                                            Experienced software engineer specializing in web app development.
+                                            Proficient in Spring Boot & Angular.
+                                            <br>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="about-content__img-wrapper">
+                                    <img src="https://uploads-ssl.webflow.com/60c0a5bb9df18e0c7bea5c2c/620c1dc29878e00f95427c8d_dylan-img.png"
+                                        loading="lazy" alt="Portrait of Dylan Brouwer" class="about-content__img">
+                                    <div class="margin--bottom" style="text-align: center; margin-bottom: 2.5rem;">
+                                        <p class="about-content__img-text">That's not me !! 😄</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--experience wf-section">
+                <div class="page-padding">
+                    <div class="container--large w-container">
+                        <div class="padding--custom1">
+                            <div class="margin--bottom margin--huge ">
+                                <div class="experience-heading__wrapper">
+                                    <h2>Work experience</h2>
+                                </div>
+                            </div>
+                            <div class="about-experience__grid" (mousemove)="handleMouseMove($event)">
+                                <div class="about-experience-card__wrapper programmerAnalyst">
+                                    <div class="about-experience-card__content">
+                                        <span>March 2023 - current</span>
+                                        <div class="margin--vertical margin--xsmall">
+                                            <h3>Programmer Analyst</h3>
+                                        </div>
+                                        <div class="label__wrapper">
+                                            <a href="#">
+                                                <div id="about-btn" href="#">Vikash Tech</div>
+                                            </a>
+                                        </div>
+                                        <div class="experience-card-info__wrapper">
+                                            <div class="experience-card-info">
+                                                <div class="max-width--small">
+                                                    <p class="text-size--small">
+                                                        Designing and developing of back-end components of web
+                                                        applications
+                                                        using Spring Boot and recently integrated Angular for enhanced
+                                                        front-end functionalities.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-experience-card__wrapper SEintern">
+                                    <div class="about-experience-card__content">
+                                        <span>Aug 2022 - Feb 2023</span>
+                                        <div class="margin--vertical margin--xsmall">
+                                            <h3>Sofware Engineer Intern</h3>
+                                        </div>
+                                        <div class="label__wrapper">
+                                            <a href="#">
+                                                <div id="about-btn" href="#">Vikash Tech</div>
+                                            </a>
+                                        </div>
+                                        <div class="experience-card-info__wrapper">
+                                            <div class="experience-card-info">
+                                                <div class="max-width--small">
+                                                    <p class="text-size--small">
+                                                        Designing and developing back-end components of web
+                                                        applications
+                                                        using Spring Boot.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-experience-card__wrapper WebDintern">
+                                    <div class="about-experience-card__content">
+                                        <span>Sep 2020 - Feb 2021</span>
+                                        <div class="margin--vertical margin--xsmall">
+                                            <h3>Web Developer Intern</h3>
+                                        </div>
+                                        <div class="label__wrapper">
+                                            <a href="#">
+                                                <div id="about-btn" href="#">TechBairn</div>
+                                            </a>
+                                        </div>
+                                        <div class="experience-card-info__wrapper">
+                                            <div class="experience-card-info">
+                                                <div class="max-width--small">
+                                                    <p class="text-size--small">
+                                                        Worked on design, development and modification of websites using
+                                                        React Js.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-tools wf-section ">
+                <div class="page-padding">
+                    <div class="container--large w-container">
+                        <div class="padding--bottom padding--custom1">
+                            <div class="tools-heading__wrapper">
+                                <h2>Skills</h2>
+                            </div>
+                            <div class="tools__content-grid">
+                                <div class="tools__list-wrapper">
+                                    <div class="tools__item-wrapper">
+                                        <a href="#">
+                                            <div id="about-btn" href="#">Languages</div>
+                                        </a>
+                                        <h6>C++</h6>
+                                        <h6>Java</h6>
+                                        <h6 class="fullJs">JavaScript</h6>
+                                        <h6 class="fullTs">Typescript</h6>
+                                        <h6 class="shortJs">JS</h6>
+                                        <h6 class="shortTs">TS</h6>
+                                        <h6>Html</h6>
+                                        <h6>Css</h6>
+                                    </div>
+                                </div>
+                                <div class="tools__list-wrapper">
+                                    <div class="tools__item-wrapper-frameworks">
+                                        <a href="#">
+                                            <div id="about-btn" href="#">Frameworks</div>
+                                        </a>
+                                        <h6>Spring Boot</h6>
+                                        <h6>Angular</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- <footer class="footer">
+            <div class="page-padding">
+                <div class="footer__main-wraper">
+                    <div class="text-size--xsmall">2023 © yashaswi</div>
+                </div>
+            </div>
+        </footer> -->
+
+    </div>
+
+</body>
