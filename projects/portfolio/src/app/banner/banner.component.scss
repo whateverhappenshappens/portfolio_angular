@@ -209,9 +209,9 @@ main > article > .article-title-section * {
   color: white;
 }
 main > article > .article-title-section > h2 {
-  flex-basis: 50%;
+  flex-basis: 70%;
   font-family: "Montserrat", sans-serif;
-  font-size: 3.5rem;
+  font-size: 1.6rem;
   line-height: 3rem;
   margin: 0px;
   text-transform: uppercase;
@@ -236,6 +236,13 @@ main > article > .article-nav-section > .article-nav-button:hover {
 main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   border-left: 1px solid var(--border-color);
 }
+.project-desc{
+  font-size: 1.5rem;
+}
+.project-link{
+  font-size: 1rem;
+  color: var(--highlight-color);
+}
 @media(max-width: 1200px) {    
   #nav-mobile-section {
     flex-basis: calc(100% * 0.75);
@@ -249,7 +256,9 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
     flex-basis: calc(100% / 3);
     gap: 3rem;
   }
-
+  .project-desc{
+    font-size: 1.5rem;
+  }
   main {
     overflow-y: auto;
   }
@@ -261,7 +270,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
    
   main > article > .article-title-section > h2 {
-    font-size: 3rem; 
+    font-size: 1.78rem;
     line-height: 2.6rem;
   }
   
