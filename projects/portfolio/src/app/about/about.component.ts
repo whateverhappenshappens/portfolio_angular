@@ -9,7 +9,7 @@ import { CardHoverService } from '../card-hover.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css','./aboutCss.css','./aboutCss1.css']
 })
 export class AboutComponent {
 
