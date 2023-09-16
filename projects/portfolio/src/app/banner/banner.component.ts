@@ -10,7 +10,7 @@ import { CarouselService } from '../carousel.service';
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.scss']
+  styleUrls: ['./banner.component.scss','./banner.main.scss','./banner.media.scss','./banner.media.mobile.scss','./banner.nav.scss','./banner.main2.scss','./banner.main3.scss']
 })
 export class BannerComponent {
 
