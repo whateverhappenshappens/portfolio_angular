@@ -1,0 +1,77 @@
+.about-content__img {
+    width: 101%;
+    max-width: none;
+    margin-top: -2px;
+}
+
+.about-experience__grid,
+.tools__content-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+}
+
+.about-experience__grid {
+    gap: 1em;
+    padding: 1em 0;
+    place-self: center;
+
+    
+}
+
+.about-experience-card__wrapper {
+    aspect-ratio: 1/1.6;
+    cursor: pointer;
+    border-radius: 1.6rem;
+    position: relative;
+    width: 100%;
+    height: 34rem;
+    padding: 2.8rem;
+    border: 1px solid hsla(0, 0%, 100%, .04);
+    background-color: rgba(157, 132, 255, .04);
+    overflow: hidden;
+}
+
+.experience-card-info {
+    max-height: 100%;
+    overflow: auto;
+}
+
+.about-experience-card__wrapper:hover::before,
+.about-experience__grid:hover>.about-experience-card__wrapper::after {
+    opacity: 1;
+}
+
+.about-experience-card__wrapper::after,
+.about-experience-card__wrapper::before {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .5s;
+    width: 100%
+}
+
+.about-experience-card__wrapper::before {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, .06), transparent 40%);
+    z-index: 3;
+}
+
+.about-experience-card__wrapper::after {
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, .4), transparent 40%);
+    z-index: 1;
+}
+
+.about-experience-card__wrapper>.about-experience-card__content {
+    background-color: var();
+    border-radius: inherit;
+    display: grid;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+}
