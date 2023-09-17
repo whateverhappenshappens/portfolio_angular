@@ -16,7 +16,7 @@ function alphabetsOnlyValidator(): ValidatorFn {
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css']
+  styleUrls: ['./contact-form.component.css','./contact-form.form.css','./contact-form.main.css','./contact-form.media.css','./contact-form.nav.css','./contact-form.textutility.css','./contact-form.marginutility.css']
 })
 export class ContactFormComponent implements OnInit {
 
