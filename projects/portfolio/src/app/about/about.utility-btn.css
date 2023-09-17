@@ -1,0 +1,79 @@
+.margin--bottom,
+.margin--left,
+.margin--top,
+.margin--vertical {
+    margin-right: 0 !important;
+}
+
+.margin--bottom,
+.margin--right,
+.margin--top,
+.margin--vertical {
+    margin-left: 0 !important;
+}
+
+.margin--bottom,
+.margin--horizontal,
+.margin--left,
+.margin--right {
+    margin-top: 0 !important;
+}
+
+.margin--horizontal,
+.margin--left,
+.margin--right,
+.margin--top {
+    margin-bottom: 0 !important;
+}
+
+body,
+main {
+    background-color: var(--background-color);
+}
+
+body,
+p {
+    margin: 0;
+}
+
+body,
+nav,
+nav .nav-section {
+    display: flex;
+}
+
+#about-active,
+#about-btn,
+#nav-toggle-button:hover,
+#nav-toggle-button:hover>span,
+a:hover {
+    color: var(--highlight-color);
+}
+
+#about-btn,
+img {
+    display: inline-block;
+}
+
+#about-btn,
+a {
+    text-decoration: none;
+}
+
+#about-btn,
+#nav-toggle-button,
+.heading-huge__row,
+.page-padding,
+.section--tools,
+.title__wrapper,
+main {
+    position: relative;
+}
+
+.about-content__img-wrapper,
+.about-content__wrapper {
+    grid-column-start: span 1;
+    grid-column-end: span 1;
+    grid-row-start: span 1;
+    grid-row-end: span 1;
+}
