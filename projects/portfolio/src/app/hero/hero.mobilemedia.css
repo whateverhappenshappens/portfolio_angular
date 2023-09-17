@@ -1,0 +1,59 @@
+:host {
+    --background-color: rgb(6, 11, 25);
+    --border-color: rgb(255, 255, 255, 0.1);
+    --highlight-color: rgb(126, 87, 194);
+}
+@media screen and (max-width:479px) {
+    nav {
+        height: 10vh;
+        max-width: none;
+    }.container--xlarge {
+        display: block;
+        max-width: 146rem;
+    }.p-info {
+        font-size: 1.2rem;
+    }.header-home-content-wrapper {
+        padding: 3.2rem;
+    }.header-home__grid {
+        display: -ms-grid;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 1fr 1fr 0.5fr;
+    }.grid-item__video {
+        display: flex;
+        border-bottom: 2px solid var(--border-color);
+        width: 100vw;
+        height: 20rem;
+    }.grid-item__description {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        border-bottom: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color);
+        order: 3;
+    }.grid-item__title {
+        display: flex;
+        border-bottom: 1px solid var(--border-color);
+        order: 2;
+        height: 16rem;
+        padding-right: 2.4rem;
+        padding-left: 2.4rem;
+    }.grid-item__work {
+        display: flex;
+        border: 1px solid var(--border-color);
+        order: 4;
+        height: 20rem;
+        padding: 4.8rem 3.2rem;
+    }.icon-hand {
+        width: 2.5rem;
+        /* padding-top: 20px; */
+    }.heading-icon-plus {
+        width: 5rem;
+        margin-right: 3rem;
+    }.header__heading-wrapper {
+        height: 5.6rem;
+        max-width: 28rem;
+    }
+}

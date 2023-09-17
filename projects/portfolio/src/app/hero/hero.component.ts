@@ -8,7 +8,7 @@ import { ResponsiveDesignService } from '../responsive-design.service';
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+  styleUrls: ['./hero.component.css','./hero.nav.css','./hero.grid.css','./hero.heading.css','./hero.margin-utility.css','./hero.media.css','./hero.media2.css','./hero.media3.css','./hero.media4.css','./hero.mobilemedia.css','./hero.rest-utility.css']
 })
 export class HeroComponent {
 
